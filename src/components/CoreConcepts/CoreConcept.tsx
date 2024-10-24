@@ -1,7 +1,5 @@
 import { Concept } from '../../models/Concept';
 
-import './CoreConcept.css';
-
 const CoreConcept = (props: Concept) => {
   return (
     <li>

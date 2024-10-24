@@ -1,6 +1,6 @@
 export enum TabName {
-  Components = 'Components',
-  JSX = 'JSX',
-  Props = 'Props',
-  State = 'State',
+  Components = 'components',
+  JSX = 'jsx',
+  Props = 'props',
+  State = 'state',
 }

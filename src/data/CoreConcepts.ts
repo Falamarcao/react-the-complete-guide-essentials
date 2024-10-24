@@ -5,7 +5,7 @@ import propsImg from '../assets/config.png';
 import jsxImg from '../assets/jsx-ui.png';
 import stateImg from '../assets/state-mgmt.png';
 
-export const CORE_CONCEPTS: Concept[] = [
+export const CORE_CONCEPTS: Readonly<Concept[]> = [
   {
     image: componentsImg,
     title: 'Components',
