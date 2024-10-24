@@ -32,15 +32,29 @@ const Examples = () => {
     <section id="examples">
       <h2>Examples</h2>
       <menu>
-        <TabButton onSelect={() => handleSelect(TabName.Components)}>
+        <TabButton
+          isSelected={selectedTab === TabName.Components}
+          onSelect={() => handleSelect(TabName.Components)}
+        >
           Components
         </TabButton>
-        <TabButton onSelect={() => handleSelect(TabName.JSX)}>JSX</TabButton>
-        <TabButton onSelect={() => handleSelect(TabName.Props)}>
+        <TabButton
+          isSelected={selectedTab === TabName.JSX}
+          onSelect={() => handleSelect(TabName.JSX)}
+        >
+          JSX
+        </TabButton>
+        <TabButton
+          isSelected={selectedTab === TabName.Props}
+          onSelect={() => handleSelect(TabName.Props)}
+        >
           Props
         </TabButton>
         {/* Alternatively we can use `bind`. */}
-        <TabButton onSelect={handleSelect.bind(null, TabName.State)}>
+        <TabButton
+          isSelected={selectedTab === TabName.State}
+          onSelect={handleSelect.bind(null, TabName.State)}
+        >
           State
         </TabButton>
       </menu>
