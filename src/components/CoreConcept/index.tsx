@@ -1,4 +1,4 @@
-import { Concept } from '../../models/concept';
+import { Concept } from '../../models/Concept';
 
 import './CoreConcept.css';
 

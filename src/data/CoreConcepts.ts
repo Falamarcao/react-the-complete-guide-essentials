@@ -1,4 +1,4 @@
-import { Concept } from '../models/concept';
+import { Concept } from '../models/Concept';
 
 import componentsImg from '../assets/components.png';
 import propsImg from '../assets/config.png';
