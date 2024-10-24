@@ -1,8 +1,8 @@
-import { Concept } from '../models/concept';
+import { Concept } from '../../models/concept';
+
+import './CoreConcept.css';
 
 const CoreConcept = (props: Concept) => {
-
-    
   return (
     <li>
       <img src={props.image} alt={props.title} />
