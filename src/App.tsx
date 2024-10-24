@@ -1,5 +1,3 @@
-import { MouseEvent } from 'react';
-
 import { uniqueId } from 'lodash';
 
 import CoreConcept from './components/CoreConcept';
