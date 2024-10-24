@@ -4,7 +4,7 @@ import CoreConcept from './components/CoreConcept';
 import Header from './components/Header';
 
 import { Concept } from './models/concept';
-import { CORE_CONCEPTS } from './data/core_concepts';
+import { CORE_CONCEPTS } from './data/CoreConcepts';
 
 function App() {
   return (
