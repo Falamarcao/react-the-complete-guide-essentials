@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import reactImg from '../../assets/react-core-concepts.png';
 
 import './Header.css';
@@ -10,9 +9,7 @@ function getRandomInt(max: number) {
 }
 
 const Header = () => {
-  const adjective = useMemo(() => {
-    return adjectives[getRandomInt(adjectives.length)];
-  }, []);
+  const adjective = adjectives[getRandomInt(adjectives.length)];;
 
   return (
     <header>
