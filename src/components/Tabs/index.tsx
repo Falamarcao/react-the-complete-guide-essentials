@@ -6,7 +6,7 @@ interface TabsProps {
   children: ReactNode;
 }
 
-const Tabs = ({ buttonsContainer, buttons, children }: TabsProps) => {
+const Tabs = ({ buttonsContainer = 'menu', buttons, children }: TabsProps) => {
   const ButtonsContainer = buttonsContainer;
 
   return (
