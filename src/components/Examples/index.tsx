@@ -1,6 +1,7 @@
 import { ReactNode, useState } from 'react';
 
 import Section from '../Section';
+import Tabs from '../Tabs';
 import TabButton from '../TabButton';
 
 import { TabName } from '../../models/TabName';
@@ -8,6 +9,7 @@ import { TabName } from '../../models/TabName';
 import { EXAMPLES } from '../../data/Examples';
 
 import './Examples.css';
+
 
 const Examples = () => {
   const [selectedTab, setSelectedTab] = useState<TabName>();
@@ -31,34 +33,39 @@ const Examples = () => {
 
   return (
     <Section id="examples" title="Examples">
-      <menu>
-        <TabButton
-          isSelected={selectedTab === TabName.Components}
-          onSelect={() => handleSelect(TabName.Components)}
-        >
-          Components
-        </TabButton>
-        <TabButton
-          isSelected={selectedTab === TabName.JSX}
-          onSelect={() => handleSelect(TabName.JSX)}
-        >
-          JSX
-        </TabButton>
-        <TabButton
-          isSelected={selectedTab === TabName.Props}
-          onSelect={() => handleSelect(TabName.Props)}
-        >
-          Props
-        </TabButton>
-        {/* Alternatively we can use `bind`. */}
-        <TabButton
-          isSelected={selectedTab === TabName.State}
-          onSelect={handleSelect.bind(null, TabName.State)}
-        >
-          State
-        </TabButton>
-      </menu>
-      {content}
+      <Tabs
+        buttons={
+          <>
+            <TabButton
+              isSelected={selectedTab === TabName.Components}
+              onSelect={() => handleSelect(TabName.Components)}
+            >
+              Components
+            </TabButton>
+            <TabButton
+              isSelected={selectedTab === TabName.JSX}
+              onSelect={() => handleSelect(TabName.JSX)}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={selectedTab === TabName.Props}
+              onSelect={() => handleSelect(TabName.Props)}
+            >
+              Props
+            </TabButton>
+            {/* Alternatively we can use `bind`. */}
+            <TabButton
+              isSelected={selectedTab === TabName.State}
+              onSelect={handleSelect.bind(null, TabName.State)}
+            >
+              State
+            </TabButton>
+          </>
+        }
+      >
+        {content}
+      </Tabs>
     </Section>
   );
 };
