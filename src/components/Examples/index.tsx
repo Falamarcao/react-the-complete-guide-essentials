@@ -1,5 +1,6 @@
 import { ReactNode, useState } from 'react';
 
+import Section from '../Section';
 import TabButton from '../TabButton';
 
 import { TabName } from '../../models/TabName';
@@ -29,8 +30,7 @@ const Examples = () => {
     );
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section id="examples" title="Examples">
       <menu>
         <TabButton
           isSelected={selectedTab === TabName.Components}
@@ -59,7 +59,7 @@ const Examples = () => {
         </TabButton>
       </menu>
       {content}
-    </section>
+    </Section>
   );
 };
 
