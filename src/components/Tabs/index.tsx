@@ -1,14 +1,17 @@
-import { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 
 interface TabsProps {
+  buttonsContainer: ElementType;
   buttons: ReactNode;
   children: ReactNode;
 }
 
-const Tabs = ({ buttons, children }: TabsProps) => {
+const Tabs = ({ buttonsContainer, buttons, children }: TabsProps) => {
+  const ButtonsContainer = buttonsContainer;
+
   return (
     <>
-      <menu>{buttons}</menu>
+      <ButtonsContainer>{buttons}</ButtonsContainer>
       {children}
     </>
   );
