@@ -10,7 +10,6 @@ import { EXAMPLES } from '../../data/Examples';
 
 import './Examples.css';
 
-
 const Examples = () => {
   const [selectedTab, setSelectedTab] = useState<TabName>();
 
